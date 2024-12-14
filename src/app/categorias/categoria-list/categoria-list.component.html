@@ -1,0 +1,49 @@
+<div class="jumbotron jumbotron-fluid jumbo-bg-4 mt-4">
+  <div class="container">
+      <h1 class="jumbo-title text-center">Gestion de Categorias</h1>
+  </div>
+</div>
+
+<div class="button-container text-center mt-4">
+  <a class="btn btn-success btn-sm btn-nueva-categoria" [routerLink]="['/categorias', 'new']" [class.disabled]="!isAdmin">
+    <fa-icon [icon]="faPlus"></fa-icon>
+    <span class="d-none d-md-inline"> Nueva Categoría</span>
+  </a>
+</div>
+
+<app-categoria-search [categorias]="categorias!" (categoriasEncontrados)="aplicarFiltroCategorias($event)" *ngIf="productos"></app-categoria-search>
+
+<div class="tabla-container text-center">
+  <table class="table table-bordered table-hover table-responsive-sm mx-auto">
+    <thead class="table-light">
+      <tr>
+        <th class="text-center">#</th>
+        <th class="text-center">Categoría</th>
+        <th class="text-center">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let categoria of filteredCategoria">
+        <td class="text-center">{{categoria.id}}</td>
+        <td class="text-center">{{categoria.name}}</td>
+        <td class="text-center">
+          <div class="btn-group" role="group">
+            <!-- Ver detalle -->
+            <a class="btn btn-outline-info btn-sm" [routerLink]="['/categorias', categoria.id, 'detail']">
+              <fa-icon [icon]="faEye"></fa-icon>
+            </a>
+            <!-- Editar -->
+            <a class="btn btn-outline-primary btn-sm" [routerLink]="['/categorias', categoria.id, 'edit']">
+              <fa-icon [icon]="faPencil"></fa-icon>
+            </a>
+            <!-- Eliminar -->
+            <button class="btn btn-outline-danger btn-sm" (click)="onDelete(categoria)" *ngIf="isAdmin">
+              <fa-icon [icon]="faTrash"></fa-icon>
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

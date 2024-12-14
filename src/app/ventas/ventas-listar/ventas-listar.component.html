@@ -1,0 +1,45 @@
+<div class="jumbotron jumbotron-fluid jumbo-bg-4 mt-4">
+    <div class="container">
+      <h1 class="jumbo-title text-center">listado de Ventas</h1>
+    </div>
+  </div>
+  
+  <!-- Tabla de ventas -->
+  <div class="tabla-container text-center">
+    <table class="table table-bordered table-hover table-responsive-sm mx-auto">
+      <thead>
+        <tr>
+          <th class="text-center">#</th>
+          <th class="text-center">Fecha</th>
+          <th class="text-center">Comprador</th>
+          <th class="text-center">Vendedor</th>
+          <th class="text-center">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let venta of ventas">
+          <td>{{ venta.id }}</td>
+          <!-- Usamos el pipe 'date' para formatear la fecha -->
+          <td>{{ venta.fecha | date: 'dd/MM/yyyy' }}</td>
+          <td>{{ venta.comprador }}</td>
+          <td>{{ venta.vendedor }}</td>
+          <td class="text-center">
+            <!-- Acciones para cada venta -->
+            <a class="btn btn-primary btn-sm" [routerLink]="['/ventas', venta.id]">
+              <fa-icon [icon]="faEye"></fa-icon>
+              <span class="d-none d-md-inline"> Ver</span>
+            </a>
+            <a class="btn btn-warning btn-sm" [routerLink]="['/ventas', venta.id, 'edit']" [class.disabled]="!isAdmin">
+              <fa-icon [icon]="faPencil"></fa-icon>
+              <span class="d-none d-md-inline"> Editar</span>
+            </a>
+            <button class="btn btn-danger btn-sm" [class.disabled]="!isAdmin">
+              <fa-icon [icon]="faTrash"></fa-icon>
+              <span class="d-none d-md-inline"> Eliminar</span>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

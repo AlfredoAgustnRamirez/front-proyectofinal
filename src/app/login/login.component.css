@@ -1,0 +1,49 @@
+/* Estilo para el título del formulario */
+.login-title {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  /* Estilo para el formulario de inicio de sesión */
+  .login-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilo para cada campo de entrada */
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  /* Estilo para las etiquetas de los campos */
+  .form-label {
+    font-weight: bold;
+    color: #555;
+  }
+  
+  /* Estilo para los botones */
+  .btn-primary {
+    width: 100%;
+  }
+  
+  /* Estilo para el enlace de registro */
+  .signup-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  
+  /* Estilo para el mensaje de error */
+  .alert-danger {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+  }
+  

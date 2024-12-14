@@ -1,0 +1,61 @@
+/* Estilo para el título del formulario */
+.register-title {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Estilo para el formulario de registro */
+.register-form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para cada campo de entrada */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* Estilo para las etiquetas de los campos */
+.form-label {
+  font-weight: bold;
+  color: #555;
+}
+
+/* Estilo para los botones */
+.btn-primary {
+  width: 100%;
+}
+
+/* Estilo para el enlace de inicio de sesión */
+.login-link {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+/* Estilo para los mensajes de error */
+.text-danger {
+  font-size: 12px;
+  color: #e74c3c;
+  margin-top: 5px;
+}
+
+/* Estilo para los mensajes de error al tocar los campos */
+.text-danger.ng-touched {
+  visibility: visible;
+}
+
+/* Estilo para campos de entrada inválidos */
+.form-control.ng-invalid.ng-touched {
+  border-color: #e74c3c;
+}
+
+/* Estilo para los campos de entrada válidos */
+.form-control.ng-valid.ng-touched {
+  border-color: #2ecc71;
+}

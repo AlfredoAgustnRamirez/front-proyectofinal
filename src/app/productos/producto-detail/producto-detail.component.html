@@ -1,0 +1,44 @@
+<a class="btn btn-volver mb-3 mt-4" [routerLink]="['/productos']">
+  <fa-icon [icon]="faAngleLeft"></fa-icon>
+  <span class="d-none d-md-inline ms-2">Volver</span>
+</a>
+
+<div *ngIf="producto" class="d-flex flex-column flex-md-row align-items-center table-responsive mt-4">
+  <!-- Imagen del Producto -->
+  <div class="col-12 col-md-4 mb-3 mb-md-0 mt-4">
+    <div *ngIf="producto.imageUrl; else sinImagen">
+      <img [src]="producto.imageUrl" class="img-fluid rounded shadow-sm" alt="Imagen del producto" />
+    </div>
+    <ng-template #sinImagen>
+      <div class="alert alert-info mb-0">
+        No hay imagen
+      </div>
+    </ng-template>
+  </div>
+
+  <!-- Detalles del Producto -->
+  <div class="col-12 col-md-8 mt-4">
+    <table class="table table-sm table-borderless mt-4">
+      <tbody>
+        <tr>
+          <th>Nombre:</th>
+          <td>{{ producto.name }}</td>
+        </tr>
+        <tr>
+          <th>Precio:</th>
+          <td>{{ producto.price | currency }}</td>
+        </tr>
+        <tr>
+          <th>Categoría:</th>
+          <td>{{ producto.categoryId }}</td>
+        </tr>
+        <tr>
+          <th>Valoración:</th>
+          <td>
+            <bar-rating [rate]="producto.score" max="5" readonly="true"></bar-rating>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

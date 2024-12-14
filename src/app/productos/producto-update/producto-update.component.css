@@ -1,0 +1,48 @@
+.btn-volver {
+    float: right;
+    background-color: rgb(139, 128, 238);
+    color: white;  /* Cambié el color a blanco para que resalte más */
+    padding: 10px 10px;  /* Aumenté el padding para hacerlo más grande */
+    border: none;  /* Eliminé el borde por defecto */
+    border-radius: 25px;  /* Bordes redondeados */
+    font-size: 16px;  /* Tamaño de la fuente */
+    font-weight: bold;  /* Hice la fuente en negrita para más impacto */
+    text-transform: uppercase;  /* Texto en mayúsculas */
+    cursor: pointer;  /* Cambié el cursor a pointer para indicar que es clickeable */
+    transition: all 0.3s ease-in-out;  /* Añadí una transición suave */
+}
+
+.btn-volver:hover {
+    background-color: rgb(100, 90, 180);  /* Efecto hover con un color más oscuro */
+    transform: scale(1.1);  /* Agrandamos ligeramente el botón al hacer hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);  /* Sombra sutil para darle profundidad */
+}
+
+.btn-volver:focus {
+    outline: none;  /* Quité el borde azul que aparece en algunos navegadores */
+    box-shadow: 0 0 10px rgba(139, 128, 238, 0.8);  /* Añadí un halo de sombra en el enfoque */
+}
+
+.btn-guardar {
+    background-color: rgb(139, 128, 238);
+    color: white;  /* Cambié el color a blanco para que resalte más */
+    padding: 10px 10px;  /* Aumenté el padding para hacerlo más grande */
+    border: none;  /* Eliminé el borde por defecto */
+    border-radius: 25px;  /* Bordes redondeados */
+    font-size: 16px;  /* Tamaño de la fuente */
+    font-weight: bold;  /* Hice la fuente en negrita para más impacto */
+    text-transform: uppercase;  /* Texto en mayúsculas */
+    cursor: pointer;  /* Cambié el cursor a pointer para indicar que es clickeable */
+    transition: all 0.3s ease-in-out;  /* Añadí una transición suave */
+}
+
+.btn-guardar:hover {
+    background-color: rgb(100, 90, 180);  /* Efecto hover con un color más oscuro */
+    transform: scale(1.1);  /* Agrandamos ligeramente el botón al hacer hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);  /* Sombra sutil para darle profundidad */
+}
+
+.btn-guardar:focus {
+    outline: none;  /* Quité el borde azul que aparece en algunos navegadores */
+    box-shadow: 0 0 10px rgba(139, 128, 238, 0.8);  /* Añadí un halo de sombra en el enfoque */
+}

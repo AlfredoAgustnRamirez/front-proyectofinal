@@ -1,0 +1,134 @@
+/* Centrado general */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f8f9fa;
+  }
+  
+  .jumbotron{
+    background-color: #f7bfed;
+    height: 100px;
+  }
+
+  .jumbo-title {
+    text-align: center;
+    padding-top: 25px;  /* Ajusta este valor para agregar espacio dentro del contenedor */
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgb(24, 22, 22);
+  }
+  
+  .btn-nueva-categoria {
+    float: right;
+  }
+  
+ /* Centrar la tabla en el contenedor */
+.tabla-container {
+    display: flex;
+    justify-content: center; /* Centra la tabla horizontalmente */
+    align-items: center;     /* Centra la tabla verticalmente */
+    min-height: 50vh;         /* Asegura que el contenedor tenga al menos la mitad de la altura de la pantalla */
+    padding: 20px;
+  }
+  
+  .table {
+    width: 100%; /* La tabla tomará todo el ancho disponible dentro de su contenedor */
+    max-width: 1200px; /* Opcional: Limita el ancho máximo de la tabla */
+  }
+  
+  /* Si deseas ajustar el texto de la tabla */
+  .table th, .table td {
+    text-align: center;
+  }
+  
+  .table th, .table td {
+    vertical-align: middle;
+    padding: 0.75rem; /* Ajustar el padding para que se vea mejor */
+  }
+  
+  .table-bordered {
+    border: 1px solid #ddd;
+  }
+  
+  .table-hover tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .table-light th {
+    background-color: #f8f9fa;
+  }
+  
+  /* Columna # */
+  .table th:first-child, .table td:first-child {
+    width: 5%; /* Ajustar la columna # para que ocupe el mínimo necesario */
+  }
+  
+  .table th:nth-child(2), .table td:nth-child(2) {
+    width: 45%; /* La columna "Categoría" ocupará la mayor parte del espacio disponible */
+  }
+  
+  .table th:last-child, .table td:last-child {
+    width: 50%; /* La columna "Acciones" ocupará el resto del espacio */
+  }
+  
+  .btn-group .btn {
+    margin-left: 5px;
+  }
+  
+  .btn-outline-info, .btn-outline-primary, .btn-outline-danger {
+    border-radius: 5px;
+  }
+  
+  /* Ajuste de botones */
+  .btn-outline-info {
+    color: #17a2b8;
+    border-color: #17a2b8;
+  }
+  
+  .btn-outline-primary {
+    color: #007bff;
+    border-color: #007bff;
+  }
+  
+  .btn-outline-danger {
+    color: #dc3545;
+    border-color: #dc3545;
+  }
+  
+  /* Hacer la tabla más compacta y responsiva */
+  .table-responsive-sm {
+    overflow-x: auto;
+  }
+  
+  /* Mejorar los iconos dentro de los botones */
+  .fa-icon {
+    margin-right: 5px;
+  }
+  
+  /* Espaciado entre los elementos */
+  .d-flex, .d-block {
+    margin-top: 10px;
+  }
+  
+  /* Media Queries para mejorar la apariencia en dispositivos pequeños */
+  @media (max-width: 768px) {
+    .tabla-container {
+      width: 100%;
+      margin-top: 10px;
+    }
+  
+    /* Ajustar el ancho de las columnas en dispositivos pequeños */
+    .table th, .table td {
+      width: auto;
+      text-align: left;
+    }
+  
+    /* Hacer que los iconos y los textos en los botones se apilen en pantallas pequeñas */
+    .btn-group .btn span {
+      display: block;
+    }
+  }
+  

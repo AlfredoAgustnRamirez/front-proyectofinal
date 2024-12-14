@@ -1,0 +1,67 @@
+<div class="jumbotron jumbotron-fluid jumbo-bg-4 mt-4">
+  <div class="container">
+      <h1 class="jumbo-title text-center">Gestion de Productos</h1>
+  </div>
+</div>
+
+<div class="button-container text-center mt-4">
+  <a class="btn btn-success btn-sm btn-nuevo-producto" [routerLink]="['/productos', 'new']" [class.disabled]="!isAdmin">
+    <fa-icon [icon]="faPlus"></fa-icon>
+    <span class="d-none d-md-inline"> Nuevo Producto</span>
+  </a>
+</div>
+
+<app-producto-search
+  [productos]="productos"
+  (productosEncontrados)="aplicarFiltroProductos($event)"
+  *ngIf="productos"
+></app-producto-search>
+
+<div class="tabla-container text-center">
+  <table class="table table-bordered table-hover table-responsive-sm mx-auto">
+    <thead>
+      <tr>
+        <th class="text-center">#</th>
+        <th class="text-center">Nombre</th>
+        <th class="text-center">Categoría</th>
+        <th class="text-center">Precio</th>
+        <th class="text-center">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let producto of filteredProductos">
+        <td>{{ producto.id }}</td>
+        <td>{{ producto.name }}</td>
+        <td>
+          <span class="badge bg-secondary">
+            {{ getNombreCategoria(producto.categoryId) }}
+          </span>
+        </td>
+        <td class="text-center">{{ producto.price | currency }}</td>
+        <td class="text-center">
+          <div class="btn-group" role="group">
+            <a
+              class="btn btn-outline-info btn-sm"
+              [routerLink]="['/productos', producto.id, 'detail']"
+            >
+              <fa-icon [icon]="faEye"></fa-icon>
+            </a>
+            <a
+              class="btn btn-outline-primary btn-sm"
+              [routerLink]="['/productos', producto.id, 'edit']"
+            >
+              <fa-icon [icon]="faPencil"></fa-icon>
+            </a>
+            <button
+              class="btn btn-outline-danger btn-sm"
+              (click)="onDelete(producto)"
+              *ngIf="isAdmin"
+            >
+              <fa-icon [icon]="faTrash"></fa-icon>
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

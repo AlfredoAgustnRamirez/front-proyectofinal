@@ -1,0 +1,83 @@
+.btn-volver {
+    background-color: rgb(139, 128, 238);
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    float: right;
+}
+
+.btn-volver:hover {
+    background-color: rgb(100, 90, 180);
+    transform: scale(1.05);
+}
+
+.table {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.table th, .table td {
+    vertical-align: middle;
+    padding: 8px 15px;
+    font-size: 14px;
+}
+
+.table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+}
+
+.table td {
+    color: #555;
+}
+
+.table-sm td, .table-sm th {
+    padding: 10px 12px;
+}
+
+.table-borderless td, .table-borderless th {
+    border: none;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.alert-info {
+    margin-bottom: 0;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+/* Estilo de la imagen */
+.img-fluid {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de la disposición */
+.d-flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-md-row {
+    flex-direction: row;
+}
+
+.align-items-center {
+    align-items: center;
+}
