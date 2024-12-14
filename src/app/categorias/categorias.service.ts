@@ -8,18 +8,24 @@ import { ENDPOINTS } from '../shared/endpoints.constant';
   providedIn: 'root',
 })
 export class CategoriasService {
-
   constructor(private httpClient: HttpClient) {}
 
   listar(): Observable<Array<ICategoria>> {
-    return this.httpClient.get<Array<ICategoria>>(`${ENDPOINTS.apiUrl}/Categories`);
+    return this.httpClient.get<Array<ICategoria>>(
+      `${ENDPOINTS.apiUrl}/Categories`
+    );
   }
 
   detalle(id: number): Observable<ICategoria> {
-    return this.httpClient.get<ICategoria>(`${ENDPOINTS.apiUrl}/Categories/${id}`);
+    return this.httpClient.get<ICategoria>(
+      `${ENDPOINTS.apiUrl}/Categories/${id}`
+    );
   }
 
   crear(categoria: ICategoria): Observable<ICategoria> {
+    // Eliminamos el id para no informar NULL a la API que da error.
+    // * Lo ideal sería controlar esto en el formulario del componente
+    delete categoria.id;
     return this.httpClient.post<ICategoria>(
       `${ENDPOINTS.apiUrl}/Categories`,
       categoria
