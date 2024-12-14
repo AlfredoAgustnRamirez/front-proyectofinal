@@ -1,0 +1,4 @@
+img {
+  /** Esto permite que la imagen se adapte al dispositivo donde se está mostrando */
+  object-fit: contain;
+}
